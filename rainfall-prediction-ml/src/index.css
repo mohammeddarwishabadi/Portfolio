@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+/* ── Custom range slider ─────────────────────── */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 999px;
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #6366f1;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(99,102,241,.45);
+  transition: transform 0.15s;
+}
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #6366f1;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 1px 4px rgba(99,102,241,.45);
+}
+
+/* ── Rain animation ──────────────────────────── */
+@keyframes rain-fall {
+  0%   { transform: translateY(-12px) scaleY(1); opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { transform: translateY(80px) scaleY(1.1); opacity: 0; }
+}
+.rain-drop {
+  animation: rain-fall var(--duration, 1s) linear var(--delay, 0s) infinite;
+}
+
+/* ── Sun pulse ───────────────────────────────── */
+@keyframes sun-pulse {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50%      { transform: scale(1.08) rotate(8deg); }
+}
+.sun-anim {
+  animation: sun-pulse 3s ease-in-out infinite;
+}
+
+/* ── Cloud float ─────────────────────────────── */
+@keyframes cloud-float {
+  0%, 100% { transform: translateX(0); }
+  50%      { transform: translateX(8px); }
+}
+.cloud-anim {
+  animation: cloud-float 4s ease-in-out infinite;
+}
+
+/* ── Gauge fill ──────────────────────────────── */
+@keyframes gauge-fill {
+  from { stroke-dashoffset: var(--circumference); }
+}
+.gauge-arc {
+  animation: gauge-fill 0.8s ease-out;
+}
+
+/* ── Fade in ─────────────────────────────────── */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up {
+  animation: fade-up 0.35s ease-out both;
+}
+
+/* ── Scrollbar ───────────────────────────────── */
+.scrollbar-thin::-webkit-scrollbar { width: 4px; }
+.scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+.scrollbar-thin::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 999px; }
