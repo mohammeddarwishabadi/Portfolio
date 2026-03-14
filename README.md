@@ -60,11 +60,6 @@ Portfolio/
 │   ├── package.json
 │   └── README.md
 │
-├── football-analytics/ (🔜 Coming Soon)
-│   ├── code/
-│   ├── website/
-│   └── README.md
-│
 └── README.md ← You are here
 ```
 
@@ -118,19 +113,6 @@ Portfolio/
 | D | 3 | ✅ | 100 |
 
 📂 [View Project →](./concrete-strength-deep-learning)
-
----
-
-### 3. ⚽ Football Data Analytics Platform *(Coming Soon)*
-
-> **Analyzing player and team performance using ML and statistical analysis**
-
-| Detail | Info |
-|--------|------|
-| **Type** | Machine Learning + Full-Stack Web Development |
-| **Stack** | Python, Scikit-learn, React, TypeScript |
-| **Goal** | Extract tactical insights beyond conventional statistics |
-| **Status** | 🔜 In Progress |
 
 ---
 
